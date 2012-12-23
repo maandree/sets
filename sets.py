@@ -109,7 +109,12 @@ if len(next.elems) > 0:
 formula = sys.argv[1]
 formula = formula.replace('\\', '-').replace('*', '&').replace('+', '|')
 formula = formula.replace('C', '~').replace('!', '~').replace('¬', '~')
-
+formula = formula.replace('∁', '~').replace('∅', '0').replace('∆', '^')
+formula = formula.replace('∧', '&').replace('∨', '|').replace('∩', '&')
+formula = formula.replace('∪', '|').replace('⊗', '^').replace('⊻', '^')
+formula = formula.replace('⋀', '&').replace('⋁', '|').replace('⋂', '&')
+formula = formula.replace('⋃', '|').replace('Ω', 'U').replace('Ω', 'U')
+formula = formula.replace('⊕', '^').replace('𝓤', 'U').replace('↛', '-')
 
 
 for i in range(0, 10):
