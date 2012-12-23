@@ -108,6 +108,7 @@ if len(next.elems) > 0:
 
 formula = sys.argv[1]
 formula = formula.replace('\\', '-').replace('*', '&').replace('+', '|')
+formula = formula.replace('C', '~').replace('!', '~')
 
 for i in range(0, 10):
     formula = formula.replace('%i' % i, 'sets[%i]' % i)
