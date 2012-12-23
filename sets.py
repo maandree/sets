@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 '''
-sets – The practical way to se set operations on sets of lines in the shell
+sets – The practical way to do set operations on sets of lines in the shell
 
 Copyright © 2012  Mattias Andrée (maandree@kth.se)
 
