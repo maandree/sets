@@ -117,7 +117,7 @@ formula = formula.replace(']sets[', '')
 rc = eval(formula)
 
 if rc.inv:
-    rc = U - rc
+    rc = U - ~rc
 
 for e in rc.elems:
     print(e)
