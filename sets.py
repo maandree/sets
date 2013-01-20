@@ -3,7 +3,7 @@
 '''
 sets – The practical way to do set operations on sets of lines in the shell
 
-Copyright © 2012  Mattias Andrée (maandree@kth.se)
+Copyright © 2012, 2013  Mattias Andrée (maandree@member.fsf.org)
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -21,9 +21,50 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import sys
 
+
 def print(text = '', end = '\n'):
     sys.stdout.buffer.write((str(text) + end).encode('utf-8'))
 
+
+if len(sys.argv) != 1:
+    sys.stdout.buffer.flush()
+    exit(0)
+elif sys.argv[1].startswith('-'):
+    if sys.argv[1] in ('-c', '--copying', '--copyright'):
+        print()
+        print()
+        print('sets – The practical way to do set operations on sets of lines in the shell')
+        print()
+        print('Copyright © 2012, 2013  Mattias Andrée (maandree@member.fsf.org)')
+        print()
+        print('This program is free software: you can redistribute it and/or modify')
+        print('it under the terms of the GNU General Public License as published by')
+        print('the Free Software Foundation, either version 3 of the License, or')
+        print('(at your option) any later version.')
+        print()
+        print('This program is distributed in the hope that it will be useful,')
+        print('but WITHOUT ANY WARRANTY; without even the implied warranty of')
+        print('MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the')
+        print('GNU General Public License for more details.')
+        print()
+        print('You should have received a copy of the GNU General Public License')
+        print('along with this program.  If not, see <http://www.gnu.org/licenses/>.')
+        print()
+        print()
+    elif sys.argv[1] in ('-w', '--warranty'):
+        print()
+        print()
+        print('This program is distributed in the hope that it will be useful,')
+        print('but WITHOUT ANY WARRANTY; without even the implied warranty of')
+        print('MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the')
+        print('GNU General Public License for more details.')
+        print()
+        print()
+    else:
+        ;
+    sys.stdout.buffer.flush()
+    exit(0)
+    
 
 class Set():
     def __init__(self):
