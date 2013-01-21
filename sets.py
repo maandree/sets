@@ -83,7 +83,7 @@ if sys.argv[1].startswith('-'):
         print( '    ^ ⊕ ∆ ⊗ ⊻     Symmetrical difference (parity/xor)')
         print( '    & * ∧ ⋀ ∩ ⋂   Intersection (and)')
         print( '    | + ∨ ⋁ ∪ ⋃   Union (or)')
-        print('    - \\ ↛         Difference (material nonimplication/abjunction)')
+        print('    - − \\ ↛       Difference (material nonimplication/abjunction)')
         print( '    0 ∅           Empty set (false)')
         print( '    U Ω Ω 𝓤       Universe (true)')
         print()
@@ -210,6 +210,7 @@ formula = formula.replace('∪', '|').replace('⊗', '^').replace('⊻', '^')
 formula = formula.replace('⋀', '&').replace('⋁', '|').replace('⋂', '&')
 formula = formula.replace('⋃', '|').replace('Ω', 'U').replace('Ω', 'U')
 formula = formula.replace('⊕', '^').replace('𝓤', 'U').replace('↛', '-')
+formula = formula.replace('−', '-')
 
 
 for i in range(0, 10):

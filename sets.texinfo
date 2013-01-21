@@ -70,6 +70,11 @@ Texts. A copy of the license is included in the section entitled
 @cindex overview
 @cindex description
 
+@command{sets} is a practical way to do set operations in the shell.
+@command{sets} lets you use a normal algebraic expression for way you
+want returned and supply the sets via stdin.
+
+
 
 @node Invoking
 @chapter Invoking
@@ -84,10 +89,63 @@ Texts. A copy of the license is included in the section entitled
 @cindex @option{-w}
 @cindex @option{--warranty}
 
+@command{sets} can be started with @option{-c}, @option{--copying} or
+@option{--copyright} for displaying copyright information, @option{-w} or
+@option{--warranty} for displaying a warranty disclaimer. If any other
+options is used, help information is displayed.
+
+To actually use @command{sets} use one argument expressing the formula
+you want calculated (and no other arguments.) The expression is written
+in normal algebra, meaning the you use operand–operator–operand style
+expression. For example, to get the elements in set 1, that does not
+exist in set 2 nor set 3, the expression is @code{1 - 2 - 3}. And yes
+the sets are numbers from 1 and up in decimal.
+
+The sets are fetched from stdin.
+
 
 @node Using
 @chapter Using
 @cindex usage
+
+To use @command{sets} use one argument expressing the formula you want
+calculated (and no other arguments.) The expression is written in normal
+algebra, meaning the you use operand–operator–operand style expression.
+For example, to get the elements in set 1, that does not exist in set 2
+nor set 3, the expression is @code{1 - 2 - 3}. And yes the sets are numbers
+from 1 and up in decimal. Set 0 represents the empty set, and the universe
+is represented by @code{U}, and is an union of all sets.
+
+The supported operators are complement (not), symmetrical difference
+(parity/xor), intersection (and), union (or), difference (material
+nonimplication/abjunction). If your display is limited run @command{sets --help}
+to get this list (it should be complete if you use @command{info});
+the recognised symbols for the operators (and sets) are:
+
+@table @asis
+@item Complement
+~ C ∁ ! ¬
+@item Symmetrical difference
+^ ⊕ ∆ ⊗ ⊻
+@item Intersection
+& * ∧ ⋀ ∩ ⋂
+@item Union
+| + ∨ ⋁ ∪ ⋃
+@item Difference
+- − \ ↛
+@item Empty set
+0 ∅
+@item Universe
+U Ω Ω 𝓤
+@end table
+
+Round brackets are recognised for evaluation order grouping.
+
+The sets are fetched from stdin, a line in stdin in an element, sets
+are seperated by blank lines, and you can have any number of blank
+lines, meaning that you cannot have empty sets. But if you want
+empty set you should just use an element that you know is a false
+element, perhaps a dot.
 
 
 @node Behind the scenes
