@@ -153,6 +153,13 @@ element, perhaps a dot.
 @cindex behind the scenes
 @cindex inner workings
 
+@command{sets} is written in Python 3 and takes advantages of the
+possibility to overrider operators and evalute expressions. @command{sets}
+takes the user's formula and do some simple string replacements
+and lets Python evaluate the expression this is after the replacements
+a full Python instruction. Each line set is represented as an objcet
+of a class that overloads a few operators.
+
 
 
 @node License of sets
