@@ -69,8 +69,8 @@ install:
 .PHONY: uninstall
 uninstall:
 	unlink $(DESTDIR)$(PREFIX)/bin/$(PROGRAM)
-	install -m 644 $(BOOK).info.gz $(DESTDIR)$(PREFIX)/share/info
 	rm -r $(DESTDIR)$(PREFIX)/share/licenses/$(PROGRAM)
+	rm $(DESTDIR)$(PREFIX)/share/info/$(BOOK).info.gz
 
 # remove files created by `all`
 .PHONY: clean
