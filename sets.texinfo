@@ -46,7 +46,7 @@ Texts. A copy of the license is included in the section entitled
 @insertcopying
 @page
 @*@*
-@center{Or you could just combine @command{diff}, @command{grep}, @command{sed} and @command{sort}…}
+@center Or you could just combine @command{diff}, @command{grep}, @command{sed} and @command{sort}…
 @end titlepage
 
 @contents
