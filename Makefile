@@ -7,12 +7,16 @@
 # 
 # [GNU All Permissive License]
 
+PREFIX = /usr
+DATA = /share
+BIN = /bin
+PKGNAME = sets
+COMMAND = sets
+LICENSES = $(PREFIX)$(DATA)
 
-PREFIX=/usr
-
-PROGRAM=sets
-BOOK=$(PROGRAM)
+BOOK=sets
 BOOKDIR=info/
+
 
 
 # compile the package
@@ -56,24 +60,32 @@ dvi.xz: $(BOOK).dvi.xz
 
 # install to system
 .PHONY: install
-install:
-	mkdir -p "$(DESTDIR)$(PREFIX)/bin"
-	mkdir -p "$(DESTDIR)$(PREFIX)/share/licenses/$(PROGRAM)"
-	mkdir -p "$(DESTDIR)$(PREFIX)/share/info/"
-	install -m 755 "$(PROGRAM).py" "$(DESTDIR)$(PREFIX)/bin/$(PROGRAM)"
-	install -m 644 COPYING "$(DESTDIR)$(PREFIX)/share/licenses/$(PROGRAM)"
-	install -m 644 LICENSE "$(DESTDIR)$(PREFIX)/share/licenses/$(PROGRAM)"
-	install -m 644 "$(BOOK).info.gz" "$(DESTDIR)$(PREFIX)/share/info"
+install: install-cmd install-license install-info
+
+install-cmd:
+	install -dm755 "$(DESTDIR)$(PREFIX)$(BIN)"
+	install -m755 sets.py "$(DESTDIR)$(PREFIX)$(BIN)/$(COMMAND)"
+
+install-license:
+	install -dm755 "$(DESTDIR)$(LICENSES)/$(PKGNAME)"
+	install -m644 COPYING LICENSE "$(DESTDIR)$(LICENSES)/$(PKGNAME)"
+
+install-info: $(BOOK).info.gz
+	install -dm755 "$(DESTDIR)$(PREFIX)$(DATA)/info"
+	install -m644 "$(BOOK).info.gz" "$(DESTDIR)$(PREFIX)$(DATA)/info/$(PKGNAME).info.gz"
+
 
 # remove files created by `install`
 .PHONY: uninstall
 uninstall:
-	unlink "$(DESTDIR)$(PREFIX)/bin/$(PROGRAM)"
-	rm -r "$(DESTDIR)$(PREFIX)/share/licenses/$(PROGRAM)"
-	rm "$(DESTDIR)$(PREFIX)/share/info/$(BOOK).info.gz"
+	-rm -- "$(DESTDIR)$(PREFIX)$(BIN)/$(COMMAND)"
+	-rm -- "$(DESTDIR)$(LICENSES)/$(PKGNAME)/COPYING"
+	-rm -- "$(DESTDIR)$(LICENSES)/$(PKGNAME)/LICENSE"
+	-rmdir -- "$(DESTDIR)$(LICENSES)/$(PKGNAME)"
+	-rm -- "$(DESTDIR)$(PREFIX)$(DATA)/info/$(PKGNAME).info.gz"
 
 # remove files created by `all`
 .PHONY: clean
 clean:
-	rm -r *.{t2d,aux,cp,cps,fn,ky,log,pg,pgs,toc,tp,vr,vrs,op,ops,bak,info,pdf,ps,dvi,gz} 2>/dev/null || exit 0
+	-rm -r *.{t2d,aux,cp,cps,fn,ky,log,pg,pgs,toc,tp,vr,vrs,op,ops,bak,info,pdf,ps,dvi,gz} 2>/dev/null
 
