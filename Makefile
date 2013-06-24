@@ -12,7 +12,7 @@ PREFIX=/usr
 
 PROGRAM=sets
 BOOK=$(PROGRAM)
-BOOKDIR=./
+BOOKDIR=info/
 
 
 # compile the package
