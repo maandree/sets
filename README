@@ -1,0 +1,6 @@
+The practical way to do set operations on sets of lines in the shell.
+
+It supports any number of sets, understands characters UCS and normal
+ASCII alternatives and uses algebraic expressions rather than options
+and is slictly better then comm.
+
