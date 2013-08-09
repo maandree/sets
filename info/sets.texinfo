@@ -53,14 +53,14 @@ Texts. A copy of the license is included in the section entitled
 
 
 @menu
-* Overview::                        Overview of @command{sets}
-* Invoking::                        How to start @command{sets}
-* Using::                           How to use @command{sets}
-* Behind the scenes::               How @command{sets} works
-* License of sets::                 Summary of the license of the program
-* GNU General Public License::      The license of the program
-* GNU Free Documentation License::  The license of this manual
-* Concept index::                   Concept index
+* Overview::                           Overview of @command{sets}
+* Invoking::                           How to start @command{sets}
+* Using::                              How to use @command{sets}
+* Behind the scenes::                  How @command{sets} works
+* License of sets::                    Summary of the license of the program
+* GNU Affero General Public License::  The license of the program
+* GNU Free Documentation License::     The license of this manual
+* Concept index::                      Concept index
 @end menu
 
 
@@ -183,9 +183,9 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 @end flushleft
 
-@node GNU General Public License
-@appendix GNU General Public License
-@include gpl.texinfo
+@node GNU Affero General Public License
+@appendix GNU Affero General Public License
+@include agpl.texinfo
 
 @node GNU Free Documentation License
 @appendix GNU Free Documentation License

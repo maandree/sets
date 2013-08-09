@@ -5,7 +5,7 @@ pkgrel=1
 pkgdesc="The practical way to do set operations on sets of lines in the shell"
 arch=('any')
 url="https://github.com/maandree/$pkgname"
-license=('GPL3')
+license=('AGPL3')
 depends=('python>=3')
 provides=($pkgname)
 conflicts=($pkgname)
