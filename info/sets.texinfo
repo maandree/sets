@@ -18,7 +18,7 @@
 @copying
 This manual is for @command{sets}.
 
-Copyright @copyright{} 2013 Mattias Andrée  (maandree@@member.fsf.org)
+Copyright @copyright{} 2013 Mattias Andrée  (m@@maandree.se)
 
 @quotation
 Permission is granted to copy, distribute and/or modify this document
@@ -40,7 +40,7 @@ Texts. A copy of the license is included in the section entitled
 @titlepage
 @title sets 1
 @subtitle The practical way to do set operations on sets of lines in the shell
-@author Mattias Andrée, maandree@@member.fsf.org
+@author Mattias Andrée, m@@maandree.se
 @page
 @vskip 0pt plus 1filll
 @insertcopying
@@ -167,7 +167,7 @@ of a class that overloads a few operators.
 @flushleft
 sets – The practical way to do set operations on sets of lines in the shell
 
-Copyright © 2012, 2013  Mattias Andrée (maandree@@member.fsf.org)
+Copyright © 2012, 2013  Mattias Andrée (m@@maandree.se)
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

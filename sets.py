@@ -3,7 +3,7 @@
 '''
 sets – The practical way to do set operations on sets of lines in the shell
 
-Copyright © 2012, 2013  Mattias Andrée (maandree@member.fsf.org)
+Copyright © 2012, 2013  Mattias Andrée (m@maandree.se)
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published by
@@ -34,7 +34,7 @@ if sys.argv[1].startswith('-'):
         print()
         print('sets – The practical way to do set operations on sets of lines in the shell')
         print()
-        print('Copyright © 2012, 2013  Mattias Andrée (maandree@member.fsf.org)')
+        print('Copyright © 2012, 2013  Mattias Andrée (m@maandree.se)')
         print()
         print('This program is free software: you can redistribute it and/or modify')
         print('it under the terms of the GNU Affero General Public License as published by')
@@ -108,7 +108,7 @@ if sys.argv[1].startswith('-'):
         print('        c')
         print()
         print()
-        print('Copyright © 2012, 2013  Mattias Andrée (maandree@member.fsf.org)')
+        print('Copyright © 2012, 2013  Mattias Andrée (m@maandree.se)')
         print()
         print('This program is free software: you can redistribute it and/or modify')
         print('it under the terms of the GNU Affero General Public License as published by')
